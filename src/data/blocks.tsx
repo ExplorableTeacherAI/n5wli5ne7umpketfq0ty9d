@@ -11,6 +11,7 @@ import { section1IntroductionBlocks } from "./sections/Section1Introduction";
 import { section2CommonFactorsBlocks } from "./sections/Section2CommonFactors";
 import { section3SimpleExpressionsBlocks } from "./sections/Section3SimpleExpressions";
 import { section4MultipleVariablesBlocks } from "./sections/Section4MultipleVariables";
+import { section5NegativeTermsBlocks } from "./sections/Section5NegativeTerms";
 
 /**
  * ------------------------------------------------------------------
@@ -31,4 +32,7 @@ export const blocks: ReactElement[] = [
 
     // Section 4: Factorising with Multiple Variables (with Differentiated Exercise 2)
     ...section4MultipleVariablesBlocks,
+
+    // Section 5: Factorising with Negative Terms (with Differentiated Exercise 3)
+    ...section5NegativeTermsBlocks,
 ];

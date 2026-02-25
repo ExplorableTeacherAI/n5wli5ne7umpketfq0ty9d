@@ -287,6 +287,28 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
         placeholder: 'Select...',
         color: '#22C55E',
     },
+
+    // ─────────────────────────────────────────
+    // SECTION 5: Step Layout Progress
+    // ─────────────────────────────────────────
+    negativeTermsStep: {
+        defaultValue: 0,
+        type: 'number',
+        label: 'Negative Terms Step',
+        description: 'Current step in the negative terms section',
+        min: 0,
+        max: 6,
+        step: 1,
+    },
+    negativeCheckAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Negative Check Answer',
+        description: 'Student answer for checking understanding of negative factorisation',
+        placeholder: '???',
+        correctAnswer: '-3',
+        color: '#EF4444',
+    },
 };
 
 /**
