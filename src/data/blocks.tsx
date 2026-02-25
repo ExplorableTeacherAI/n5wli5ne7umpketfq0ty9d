@@ -9,6 +9,7 @@ initializeVariableColors(variableDefinitions);
 // Import section blocks
 import { section1IntroductionBlocks } from "./sections/Section1Introduction";
 import { section2CommonFactorsBlocks } from "./sections/Section2CommonFactors";
+import { section3SimpleExpressionsBlocks } from "./sections/Section3SimpleExpressions";
 
 /**
  * ------------------------------------------------------------------
@@ -23,4 +24,7 @@ export const blocks: ReactElement[] = [
 
     // Section 2: Finding Common Factors
     ...section2CommonFactorsBlocks,
+
+    // Section 3: Factorising Simple Expressions (with Differentiated Exercise 1)
+    ...section3SimpleExpressionsBlocks,
 ];
