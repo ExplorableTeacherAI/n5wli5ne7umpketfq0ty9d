@@ -78,83 +78,215 @@ export interface VariableDefinition {
  */
 export const variableDefinitions: Record<string, VariableDefinition> = {
     // ========================================
-    // ADD YOUR VARIABLES HERE
+    // FACTORISATION LESSON VARIABLES
     // ========================================
 
-    // Uncomment and modify these examples for your lesson:
-
-    /*
     // ─────────────────────────────────────────
-    // NUMBER - Use with sliders
+    // SECTION 1: Introduction - Interactive Demo
     // ─────────────────────────────────────────
-    myValue: {
-        defaultValue: 5,
+    introCoefficient: {
+        defaultValue: 2,
         type: 'number',
-        label: 'My Value',
-        description: 'A number that controls something',
-        unit: 'm',           // optional unit display
-        min: 0,
+        label: 'Coefficient',
+        description: 'The common factor outside the bracket',
+        min: 2,
+        max: 6,
+        step: 1,
+        color: '#3B82F6',
+    },
+    introTermA: {
+        defaultValue: 3,
+        type: 'number',
+        label: 'First Term',
+        description: 'The first term inside the bracket',
+        min: 1,
         max: 10,
-        step: 0.5,
+        step: 1,
+        color: '#10B981',
+    },
+    introTermB: {
+        defaultValue: 4,
+        type: 'number',
+        label: 'Second Term',
+        description: 'The second term inside the bracket',
+        min: 1,
+        max: 10,
+        step: 1,
+        color: '#F59E0B',
     },
 
     // ─────────────────────────────────────────
-    // TEXT - Free text input
+    // SECTION 2: Finding Common Factors
     // ─────────────────────────────────────────
-    lessonTitle: {
-        defaultValue: 'My Lesson',
+    cfNumber1: {
+        defaultValue: 12,
+        type: 'number',
+        label: 'First Number',
+        description: 'First number to find common factors',
+        min: 2,
+        max: 36,
+        step: 1,
+        color: '#6366F1',
+    },
+    cfNumber2: {
+        defaultValue: 18,
+        type: 'number',
+        label: 'Second Number',
+        description: 'Second number to find common factors',
+        min: 2,
+        max: 36,
+        step: 1,
+        color: '#EC4899',
+    },
+
+    // ─────────────────────────────────────────
+    // SECTION 3: Differentiated Exercise 1 (Simple)
+    // ─────────────────────────────────────────
+    ex1FoundationAnswer: {
+        defaultValue: '',
         type: 'text',
-        label: 'Lesson Title',
-        description: 'The title of your lesson',
-        placeholder: 'Enter a title...',
+        label: 'Foundation Answer 1',
+        description: 'Student answer for 2x + 4',
+        placeholder: '???',
+        correctAnswer: '2(x + 2)',
+        color: '#22C55E',
+    },
+    ex1StandardAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Standard Answer 1',
+        description: 'Student answer for 3a + 9',
+        placeholder: '???',
+        correctAnswer: '3(a + 3)',
+        color: '#3B82F6',
+    },
+    ex1ChallengeAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Challenge Answer 1',
+        description: 'Student answer for 5y + 15',
+        placeholder: '???',
+        correctAnswer: '5(y + 3)',
+        color: '#8B5CF6',
     },
 
     // ─────────────────────────────────────────
-    // SELECT - Dropdown with options
+    // SECTION 4: Differentiated Exercise 2 (Multiple Variables)
     // ─────────────────────────────────────────
-    difficulty: {
-        defaultValue: 'medium',
+    ex2FoundationAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Foundation Answer 2',
+        description: 'Student answer for 2xy + 4x',
+        placeholder: '???',
+        correctAnswer: '2x(y + 2)',
+        color: '#22C55E',
+    },
+    ex2StandardAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Standard Answer 2',
+        description: 'Student answer for 6ab + 3a',
+        placeholder: '???',
+        correctAnswer: '3a(2b + 1)',
+        color: '#3B82F6',
+    },
+    ex2ChallengeAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Challenge Answer 2',
+        description: 'Student answer for 8pq + 12p',
+        placeholder: '???',
+        correctAnswer: '4p(2q + 3)',
+        color: '#8B5CF6',
+    },
+
+    // ─────────────────────────────────────────
+    // SECTION 5: Differentiated Exercise 3 (Negative Terms)
+    // ─────────────────────────────────────────
+    ex3FoundationAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Foundation Answer 3',
+        description: 'Student answer for 4x - 8',
+        placeholder: '???',
+        correctAnswer: '4(x - 2)',
+        color: '#22C55E',
+    },
+    ex3StandardAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Standard Answer 3',
+        description: 'Student answer for 6a - 9b',
+        placeholder: '???',
+        correctAnswer: '3(2a - 3b)',
+        color: '#3B82F6',
+    },
+    ex3ChallengeAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Challenge Answer 3',
+        description: 'Student answer for -5m - 10n',
+        placeholder: '???',
+        correctAnswer: '-5(m + 2n)',
+        color: '#8B5CF6',
+    },
+
+    // ─────────────────────────────────────────
+    // SECTION 6: Check Your Work
+    // ─────────────────────────────────────────
+    checkWorkAnswer: {
+        defaultValue: '',
+        type: 'text',
+        label: 'Check Work Answer',
+        description: 'Student verifies their factorisation by expansion',
+        placeholder: '???',
+        correctAnswer: '3x + 6',
+        color: '#14B8A6',
+    },
+
+    // ─────────────────────────────────────────
+    // SECTION 7: Reflection
+    // ─────────────────────────────────────────
+    reflectionConfidence: {
+        defaultValue: 'somewhat confident',
         type: 'select',
-        label: 'Difficulty',
-        description: 'The difficulty level of the lesson',
-        options: ['easy', 'medium', 'hard', 'expert'],
+        label: 'Confidence Level',
+        description: 'Student self-assessment of confidence',
+        options: ['not confident', 'somewhat confident', 'confident', 'very confident'],
+        color: '#6366F1',
+    },
+    reflectionDifficult: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Most Difficult Part',
+        description: 'Student identifies the most challenging aspect',
+        options: ['finding common factors', 'negative terms', 'multiple variables', 'checking my work'],
+        placeholder: 'Select...',
+        color: '#EC4899',
     },
 
     // ─────────────────────────────────────────
-    // BOOLEAN - Toggle switch
+    // SECTION 8: Peer Feedback
     // ─────────────────────────────────────────
-    showHints: {
-        defaultValue: true,
-        type: 'boolean',
-        label: 'Show Hints',
-        description: 'Toggle to show or hide hints',
+    peerUnderstanding: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Peer Understanding',
+        description: 'Rate peer understanding',
+        options: ['needs more practice', 'developing', 'proficient', 'excellent'],
+        placeholder: 'Select rating...',
+        color: '#F59E0B',
     },
-
-    // ─────────────────────────────────────────
-    // ARRAY - List of numbers
-    // ─────────────────────────────────────────
-    dataPoints: {
-        defaultValue: [1, 4, 9, 16, 25],
-        type: 'array',
-        label: 'Data Points',
-        description: 'Y-values for plotting a graph',
+    peerStrength: {
+        defaultValue: '',
+        type: 'select',
+        label: 'Peer Strength',
+        description: 'Identify peer strength',
+        options: ['identifying common factors', 'writing factorised form', 'checking by expansion', 'explaining their thinking'],
+        placeholder: 'Select...',
+        color: '#22C55E',
     },
-
-    // ─────────────────────────────────────────
-    // OBJECT - Complex structured data
-    // ─────────────────────────────────────────
-    graphSettings: {
-        defaultValue: { 
-            xMin: -10, 
-            xMax: 10, 
-            showGrid: true 
-        },
-        type: 'object',
-        label: 'Graph Settings',
-        description: 'Configuration for the graph display',
-        schema: '{ xMin: number, xMax: number, showGrid: boolean }',
-    },
-    */
 };
 
 /**
