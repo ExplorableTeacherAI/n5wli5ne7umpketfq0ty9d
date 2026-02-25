@@ -12,6 +12,7 @@ import { section2CommonFactorsBlocks } from "./sections/Section2CommonFactors";
 import { section3SimpleExpressionsBlocks } from "./sections/Section3SimpleExpressions";
 import { section4MultipleVariablesBlocks } from "./sections/Section4MultipleVariables";
 import { section5NegativeTermsBlocks } from "./sections/Section5NegativeTerms";
+import { section6CheckingWorkBlocks } from "./sections/Section6CheckingWork";
 
 /**
  * ------------------------------------------------------------------
@@ -35,4 +36,7 @@ export const blocks: ReactElement[] = [
 
     // Section 5: Factorising with Negative Terms (with Differentiated Exercise 3)
     ...section5NegativeTermsBlocks,
+
+    // Section 6: Checking Your Work
+    ...section6CheckingWorkBlocks,
 ];
